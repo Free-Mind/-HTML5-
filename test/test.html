@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body>
+	<div class="buttons">
+		<button id="btn1" value="1" onclick="change(this.value)">1</button>
+		<button id="btn2" value="2" onclick="change(this.value)">2</button>
+		<button id="btn3" value="3" onclick="change(this.value)">3</button>
+		<button id="btn4" value="4" onclick="change(this.value)">4</button>
+	</div>
+	<div class="content" id="1">
+		<h1>hello 1！</h1>
+	</div>
+	<div class="content" id="2">
+		<h1>hello 2！</h1>
+	</div>
+	<div class="content" id="3">
+		<h1>hello 3！</h1>
+	</div>
+	<div class="content" id="4">
+		<h1>hello 4！</h1>
+	</div>
+</body>
+<script>
+	function change(value){
+		var divs = document.getElementsByClassName('content');
+		for(var i=0;i<divs.length;i++){
+			divs[i].style.display = "none";
+		}
+		document.getElementById(value).style.display="";
+	}
+</script>
+</html>

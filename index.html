@@ -1,0 +1,177 @@
+<!DCOTYPE html>
+<html lang='zh-CN'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Index</title>
+	<link href="./css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/index.css" rel="stylesheet">
+	<script src="./js/adjustWidth.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header class="title">
+			<div class="header">
+				<div class="city-name">北京</div>
+				<div class="account"><a style="color:white;text-decoration:none"href="#">我的</a></div>
+			</div>
+		</header>
+		<form>
+			<div class="form">
+				<div class="input-group">
+				<input type="text" class="form-control" placeholder="请输入商家" aria-describedby="basic-addon1" onclick="getSuggestion()"/>
+				</div>
+				<div class="cancel" onclick="cancel()">
+					<div class="cancel-button">关闭</div>
+				</div>
+			</div>
+		</form>
+		<div class="suggestion">
+				<ul>
+					<li>酒店1</li>
+					<li>酒店2</li>
+					<li>酒店3</li>
+					<li>酒店4</li>
+				</ul>
+		</div>
+		<div class="mask"></div>
+		<div class="content">
+			<div class="content-class">
+				<div class="img-wrapper">
+					<image src="./image/1.jpg">
+				</div>
+				<div class="info-wrapper">
+					<div class="title-line">
+						<div class="title">
+							<p class="item-name">瑞安王朝</p>
+						</div>
+					</div>
+					<p class="desc">美味套餐，环境优雅</p>
+					<div class="address-line">
+						<p class="address">海淀区北清路68号</p>
+						<p class="distance">距离您16千米</p>
+					</div>
+				</div>
+			</div>
+			<div class="content-class">
+				<div class="img-wrapper">
+					<image src="./image/2.jpg">
+				</div>
+				<div class="info-wrapper">
+					<div class="title-line">
+						<div class="title">
+							<p class="item-name">鼎城大酒店</p>
+						</div>
+					</div>
+					<p class="desc">美味套餐，环境优雅</p>
+					<div class="address-line">
+						<p class="address">海淀区北清路68号</p>
+						<p class="distance">距离您16千米</p>
+					</div>
+				</div>
+			</div>
+			<div class="content-class">
+				<div class="img-wrapper">
+					<image src="./image/3.jpg">
+				</div>
+				<div class="info-wrapper">
+					<div class="title-line">
+						<div class="title">
+							<p class="item-name">瑞安王朝</p>
+						</div>
+					</div>
+					<p class="desc">美味套餐，环境优雅</p>
+					<div class="address-line">
+						<p class="address">海淀区北清路68号</p>
+						<p class="distance">距离您16千米</p>
+					</div>
+				</div>
+			</div>
+			<div class="content-class">
+				<div class="img-wrapper">
+					<image src="./image/3.jpg">
+				</div>
+				<div class="info-wrapper">
+					<div class="title-line">
+						<div class="title">
+							<p class="item-name">瑞安王朝</p>
+						</div>
+					</div>
+					<p class="desc">美味套餐，环境优雅</p>
+					<div class="address-line">
+						<p class="address">海淀区北清路68号</p>
+						<p class="distance">距离您16千米</p>
+					</div>
+				</div>
+			</div>
+			<div class="content-class">
+				<div class="img-wrapper">
+					<image src="./image/3.jpg">
+				</div>
+				<div class="info-wrapper">
+					<div class="title-line">
+						<div class="title">
+							<p class="item-name">瑞安王朝</p>
+						</div>
+					</div>
+					<p class="desc">美味套餐，环境优雅</p>
+					<div class="address-line">
+						<p class="address">海淀区北清路68号</p>
+						<p class="distance">距离您16千米</p>
+					</div>
+				</div>
+			</div>
+			<div class="content-class">
+				<div class="img-wrapper">
+					<image src="./image/3.jpg">
+				</div>
+				<div class="info-wrapper">
+					<div class="title-line">
+						<div class="title">
+							<p class="item-name">瑞安王朝</p>
+						</div>
+					</div>
+					<p class="desc">美味套餐，环境优雅</p>
+					<div class="address-line">
+						<p class="address">海淀区北清路68号</p>
+						<p class="distance">距离您16千米</p>
+					</div>
+				</div>
+			</div>
+			<div class="content-class">
+				<div class="img-wrapper">
+					<image src="./image/3.jpg">
+				</div>
+				<div class="info-wrapper">
+					<div class="title-line">
+						<div class="title">
+							<p class="item-name">瑞安王朝</p>
+						</div>
+					</div>
+					<p class="desc">美味套餐，环境优雅</p>
+					<div class="address-line">
+						<p class="address">海淀区北清路68号</p>
+						<p class="distance">距离您16千米</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./js/jquery-2.2.1.min.js"></script>
+<script src="./css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script>
+	function getSuggestion(){
+		$(".suggestion").fadeIn(100);
+		$(".cancel").show();
+		$(".input-group").css("width","95%");
+		$(".cancel").css("width","5%");
+	}
+	function cancel(){
+		$(".cancel").hide();
+		$(".suggestion").fadeOut(100);
+		$(".input-group").css('width',"100%");
+	}
+</script>
+</html>
