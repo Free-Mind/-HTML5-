@@ -7,7 +7,6 @@
 	<title>Index</title>
 	<link href="./css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="./css/index.css" rel="stylesheet">
-	<script src="./js/adjustWidth.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -28,16 +27,16 @@
 			</div>
 		</form>
 		<div class="suggestion">
-				<ul>
-					<li>酒店1</li>
-					<li>酒店2</li>
-					<li>酒店3</li>
-					<li>酒店4</li>
+				<ul class="list-group">
+					<li class="list-group-item">酒店1</li>
+					<li class="list-group-item">酒店1</li>
+					<li class="list-group-item">酒店1</li>
+					<li class="list-group-item">酒店1</li>
 				</ul>
 		</div>
 		<div class="mask"></div>
 		<div class="content">
-			<div class="content-class">
+			<section class="content-class">
 				<div class="img-wrapper">
 					<image src="./image/1.jpg">
 				</div>
@@ -53,8 +52,8 @@
 						<p class="distance">距离您16千米</p>
 					</div>
 				</div>
-			</div>
-			<div class="content-class">
+			</section>
+			<section class="content-class">
 				<div class="img-wrapper">
 					<image src="./image/2.jpg">
 				</div>
@@ -70,8 +69,8 @@
 						<p class="distance">距离您16千米</p>
 					</div>
 				</div>
-			</div>
-			<div class="content-class">
+			</section>
+			<section class="content-class">
 				<div class="img-wrapper">
 					<image src="./image/3.jpg">
 				</div>
@@ -87,8 +86,8 @@
 						<p class="distance">距离您16千米</p>
 					</div>
 				</div>
-			</div>
-			<div class="content-class">
+			</section>
+			<section class="content-class">
 				<div class="img-wrapper">
 					<image src="./image/3.jpg">
 				</div>
@@ -104,8 +103,8 @@
 						<p class="distance">距离您16千米</p>
 					</div>
 				</div>
-			</div>
-			<div class="content-class">
+			</section>
+			<section class="content-class">
 				<div class="img-wrapper">
 					<image src="./image/3.jpg">
 				</div>
@@ -121,8 +120,8 @@
 						<p class="distance">距离您16千米</p>
 					</div>
 				</div>
-			</div>
-			<div class="content-class">
+			</section>
+			<section class="content-class">
 				<div class="img-wrapper">
 					<image src="./image/3.jpg">
 				</div>
@@ -138,8 +137,8 @@
 						<p class="distance">距离您16千米</p>
 					</div>
 				</div>
-			</div>
-			<div class="content-class">
+			</section>
+			<section class="content-class">
 				<div class="img-wrapper">
 					<image src="./image/3.jpg">
 				</div>
@@ -155,7 +154,7 @@
 						<p class="distance">距离您16千米</p>
 					</div>
 				</div>
-			</div>
+			</section>
 		</div>
 	</div>
 </body>
@@ -165,8 +164,15 @@
 	function getSuggestion(){
 		$(".suggestion").fadeIn(100);
 		$(".cancel").show();
-		$(".input-group").css("width","95%");
-		$(".cancel").css("width","5%");
+	//	var screen_width = document.body.clientWidth;
+		var total_width = $(".container").width();
+		console.log(total_width);
+		var per_cancel = Math.round(39 / total_width * 10000) / 100.00 + "%";
+		var per_input = (97-Math.round(31 / total_width * 10000) / 100.00)	+"%";
+		console.log(per_input);
+		console.log(per_cancel);
+		$(".input-group").css("width",per_input);
+		$(".cancel").css("width",per_cancel);
 	}
 	function cancel(){
 		$(".cancel").hide();

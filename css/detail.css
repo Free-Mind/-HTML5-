@@ -1,0 +1,32 @@
+.container{
+	width: 100%;
+	padding:0;
+}
+.navigation{
+	background-color: #ff4683;
+	height: 44px;
+	width: 100%;
+	padding-top: 12px;
+}
+.back{
+	width: 10%;
+	display: inline-block;
+}
+.backIcon{
+	color: white; 
+}
+.list{
+	width: 10%;
+	display: inline-block;
+}
+.listIcon{
+	color: white; 
+}
+.title{
+	width: 80%;
+	display: inline-block;
+	font-size: 18px;
+	color: white;
+	text-align: center;
+
+}
