@@ -7,6 +7,7 @@
 .container{
 	width: 100%;
 	padding: 0;
+	min-width: 320px;
 }
 .city-name{
 	float: left;
@@ -25,7 +26,7 @@
 .content-class{
 	padding-bottom: 10px;
 	padding-top: 10px;
-	min-width: 350px;
+	
 }
 img{
 	width: 120px;
@@ -42,14 +43,14 @@ img{
 .img-wrapper{
 	float: left;
 	position: relative;
-	width:30%;
+	width:37.5%;
 }	
 .info-wrapper{
 	float: left;
 	position: relative;
-	padding-left: 30px;
+
 	overflow: hidden;
-	width: 70%;
+	width: 62.5%;
 } 
 .item-name{
 	font-size: 16px;
@@ -89,7 +90,6 @@ img{
 .cancel{
 	float: right;
 	padding-top: 13px;
-	padding-left: 5px;
 	display: none;
 }
 .cancel-button{
@@ -97,7 +97,6 @@ img{
 }
 .suggestion{
 	z-index: 9999;
-	
 	display: none;
 	width: 100%;
 }
