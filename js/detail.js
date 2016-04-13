@@ -8,24 +8,35 @@ function slide(obj){
 	var line_width = screen_width / 3;
 	var value = parseInt(obj.getAttribute('value'));
 	$(".nav-line")[0].style.transform = 'translate('+value*line_width+'px)';
-	//字体颜色变化
+	//字体颜色变化+不同div显示
 	switch(value){
 		case 0:
 			$(".food").css({"color":"#ff4683"});
 			$(".room").css({"color":"#111"});
 			$(".evaluation").css({"color":"#111"});
+			//菜品div显示，房间+评价div隐藏
+			$(".food-detail").show();
+			$(".room-detail").hide();
+			$(".evaluation-detail").hide();
 			break;
 		case 1:
 			$(".food").css({"color":"#111"});
 			$(".room").css({"color":"#ff4683"});
 			$(".evaluation").css({"color":"#111"});
+			$(".food-detail").hide();
+			$(".room-detail").show();
+			$(".evaluation-detail").hide();
 			break;
 		case 2:
 			$(".food").css({"color":"#111"});
 			$(".room").css({"color":"#111"});
 			$(".evaluation").css({"color":"#ff4683"});
+			$(".food-detail").hide();
+			$(".room-detail").hide();
+			$(".evaluation-detail").show();
 			break
 	}
+
 }
 
 $(function hold_nav(){
